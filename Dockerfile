@@ -10,6 +10,6 @@ COPY *.go ./
 
 RUN go build -o /basic-app-go
 
-EXPOSE 8080
+EXPOSE 9000
 
 CMD [ "/basic-app-go" ]
