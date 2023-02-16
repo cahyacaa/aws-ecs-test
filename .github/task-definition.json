@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:748507680700:task-definition/mygoapp:5",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:748507680700:task-definition/demo-deploy:1",
     "containerDefinitions": [
         {
-            "name": "mygoappcontainer",
-            "image": "748507680700.dkr.ecr.ap-northeast-1.amazonaws.com/cahyaca:08f70961ab6ece740813d9a008eeffb16515f1f7",
+            "name": "demo-container",
+            "image": "748507680700.dkr.ecr.ap-northeast-1.amazonaws.com/cahyaca",
             "cpu": 0,
             "portMappings": [
                 {
@@ -14,22 +14,16 @@
             ],
             "essential": true,
             "entryPoint": [],
-            "command": [
-                "/basic-app-go"
-            ],
-            "environment": [
-                {
-                    "name": "APP_PORT",
-                    "value": "9000"
-                }
-            ],
+            "command": [],
+            "environment": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "workingDirectory": "/app"
+            "readonlyRootFilesystem": false
         }
     ],
-    "family": "mygoapp",
-    "revision": 5,
+    "family": "demo-deploy",
+    "taskRoleArn": "arn:aws:iam::748507680700:role/ecsTaskExecutionRole",
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -37,7 +31,7 @@
             "name": "com.amazonaws.ecs.capability.ecr-auth"
         },
         {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         }
     ],
     "placementConstraints": [],
@@ -50,6 +44,6 @@
     ],
     "cpu": "1024",
     "memory": "100",
-    "registeredAt": "2023-02-16T07:12:43.935000+07:00",
+    "registeredAt": "2023-02-16T09:10:18.229000+07:00",
     "registeredBy": "arn:aws:iam::748507680700:root"
 }
