@@ -1,0 +1,55 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:748507680700:task-definition/mygoapp:5",
+    "containerDefinitions": [
+        {
+            "name": "mygoappcontainer",
+            "image": "748507680700.dkr.ecr.ap-northeast-1.amazonaws.com/cahyaca:08f70961ab6ece740813d9a008eeffb16515f1f7",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 9000,
+                    "hostPort": 9000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [
+                "/basic-app-go"
+            ],
+            "environment": [
+                {
+                    "name": "APP_PORT",
+                    "value": "9000"
+                }
+            ],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "workingDirectory": "/app"
+        }
+    ],
+    "family": "mygoapp",
+    "revision": 5,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EXTERNAL",
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "100",
+    "registeredAt": "2023-02-16T07:12:43.935000+07:00",
+    "registeredBy": "arn:aws:iam::748507680700:root"
+}
