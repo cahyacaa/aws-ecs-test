@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:748507680700:task-definition/demo-deploy:2",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:748507680700:task-definition/demo-deploy:5",
     "containerDefinitions": [
         {
             "name": "demo-deploy",
-            "image": "748507680700.dkr.ecr.ap-northeast-1.amazonaws.com/cahyaca",
+            "image": "748507680700.dkr.ecr.ap-northeast-1.amazonaws.com/cahyaca:cd4bf613ec2a0e7ee7238e96ac55f02671d38e87",
             "cpu": 0,
             "portMappings": [
                 {
@@ -13,8 +13,6 @@
                 }
             ],
             "essential": true,
-            "entryPoint": [],
-            "command": [],
             "environment": [],
             "mountPoints": [],
             "volumesFrom": [],
@@ -23,7 +21,7 @@
     ],
     "family": "demo-deploy",
     "taskRoleArn": "arn:aws:iam::748507680700:role/ecsTaskExecutionRole",
-    "revision": 2,
+    "revision": 5,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -43,7 +41,7 @@
         "EC2"
     ],
     "cpu": "1024",
-    "memory": "100",
-    "registeredAt": "2023-02-16T09:28:37.356000+07:00",
+    "memory": "1024",
+    "registeredAt": "2023-02-16T14:23:40.766000+07:00",
     "registeredBy": "arn:aws:iam::748507680700:root"
 }
