@@ -24,7 +24,7 @@ func main() {
 	r.GET("/testing/:name", func(c *gin.Context) {
 		name := c.Param("name")
 		c.JSON(http.StatusOK, gin.H{
-			"message": fmt.Sprintf("Hi %s!, Congratulations You Did It!!", name),
+			"message": fmt.Sprintf("Hi %s!, Congratulations You Did It Works!!", name),
 		})
 	})
 	r.GET("/greeting/:name", func(c *gin.Context) {
