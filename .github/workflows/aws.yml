@@ -33,8 +33,8 @@ on:
 env:
   AWS_REGION: ${{vars.AWS_REGION}}                 # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: ${{vars.REPOSITORY_NAME}}           # set this to your Amazon ECR repository name
-  ECS_SERVICE: go-load                # set this to your Amazon ECS service name
-  ECS_CLUSTER: basic-go                 # set this to your Amazon ECS cluster name
+  ECS_SERVICE: go-service                # set this to your Amazon ECS service name
+  ECS_CLUSTER: go-cluster                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: .github/task-definition.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: basic-app-container         # set this to the name of the container in the
