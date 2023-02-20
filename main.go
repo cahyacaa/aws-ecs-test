@@ -31,7 +31,7 @@ func main() {
 	r.GET("/greeting/:name", func(c *gin.Context) {
 		name := c.Param("name")
 		c.JSON(http.StatusOK, gin.H{
-			"message": fmt.Sprintf("Hello %s! Changes At %v changes 2", name, time.Now().Format(time.RFC3339)),
+			"message": fmt.Sprintf("Hello %s! Changes At %v changes 3", name, time.Now().Format(time.RFC3339)),
 		})
 	})
 	err := r.Run(fmt.Sprintf(":%s", port))
