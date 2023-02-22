@@ -11,9 +11,9 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'ssss'
+      - 'aws-ecs-test'
       - '--image'
-      - 'gcr.io/$PROJECT_ID/aws-ecs-test:$COMMIT_SHA'
+      - 'gcr.io/modified-glyph-378521/aws-ecs-test:$COMMIT_SHA'
       - '--region'
       - 'REGION'
 images:
