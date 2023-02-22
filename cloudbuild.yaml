@@ -15,6 +15,6 @@ steps:
       - '--image'
       - 'gcr.io/modified-glyph-378521/aws-ecs-test:$COMMIT_SHA'
       - '--region'
-      - 'REGION'
+      - ' us-central1'
 images:
   - 'gcr.io/modified-glyph-378521/aws-ecs-test:$COMMIT_SHA'
